@@ -19,20 +19,11 @@ fn show_compare(filename: String, given_sha: String) {
 
 fn main() {
     let args = std::env::args().collect::<Vec<String>>();
-
+    
     match args.len() {
         1 => eprintln!("You need to insert file name as an argument"),
         2 => show_sha(args.index(1).to_string()),
         3 => show_compare(args.index(1).to_string(), args.index(2).to_string()),
         _ => panic!("Panic when checking args length")
     }
-    // if args.len() == 1 {
-    //     return;
-    // } else if args.len() == 2 {
-
-    // }
-
-    // let filename = args.index(1);
-    
-    // println!("{} : {}", filename, );
 }
